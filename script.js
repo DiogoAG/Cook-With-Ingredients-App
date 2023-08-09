@@ -67,11 +67,10 @@ function getMealList() {
           resultCount++;
         }
     }
-      console.log(resultCount);
-  
+      // console.log(resultCount);
+      
+      document.getElementById('result-count').textContent = resultCount;
       if (resultCount > 0) {
-        const resultCountElement = document.getElementById('result-count');
-        resultCountElement.textContent = resultCount;
         mealList.classList.remove('notFound');
       } else {
         html = "Sorry, we didn't find any meal!";
