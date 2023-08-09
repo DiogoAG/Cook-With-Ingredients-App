@@ -43,29 +43,67 @@ body{
     text-align: center;
 }
 .meal-search{
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 .meal-search cite{
     font-size: 1rem;
 }
-.meal-search-box{
+.meal-search-box {
     margin: 1.2rem 0;
     display: flex;
     align-items: stretch;
+    max-height: 55px; /* Set the maximum height to match the search button's height */
 }
-.search-control,
+
+.search-input-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--tenne-tawny);
+    border-radius: 2rem 0 0 2rem; /* Set border radius for the left side */
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+.selected-ingredients {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Keep the selected ingredients on one line */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scroll */
+    margin-right: .5rem;
+}
+
+.selected-ingredients.empty {
+    margin: 0; /* You can set any other styles to remove the margin */
+}
+  
+.selected-ingredients::-webkit-scrollbar {
+    display: none;
+}
+  
+.selected-ingredient {
+    background-color: var(--tenne-tawny);
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    margin: 0.15rem 0.1rem;
+    border-radius: 1rem;
+}
+  
+.search-control {
+    min-width: 37%;
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    color: var(--tenne-tawny);
+    font-family: inherit;
+}
+
 .search-btn{
     width: 100%;
-}
-.search-control{
-    padding: 0 1rem;
-    font-size: 1.1rem;
-    font-family: inherit;
-    outline: 0;
-    border: 1px solid var(--tenne-tawny);
-    color: var(--tenne-tawny);
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
 }
 .search-control::placeholder{
     color: var(--tenne-tawny);
@@ -89,7 +127,7 @@ body{
     background: var(--tenne-tawny-dark);
 }
 .meal-result{
-    margin-top: 4rem;
+    margin-top: .5rem;
 }
 #meal{
     margin: 2.4rem 0;
@@ -306,4 +344,36 @@ body{
     #meal{
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+.ingredient-choices {
+    max-width: 540px; /* Set the max width equal to the width of the search box */
+    margin: 0 auto; /* Center the ingredient choices horizontally */
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: flex-start; /* Align the buttons to the left within the container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+}
+  
+.selected-ingredient-btn,
+.ingredient-choice-btn {
+    margin: 0.15rem 0.1rem; /* Reduce the margin between buttons */
+    border: none;
+    background: var(--tenne-tawny);
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.8rem; /* Reduce the font size */
+    padding: 0.4rem 0.8rem; /* Reduce the padding */
+    border-radius: 1rem;
+    transition: all 0.4s linear;
+}
+
+.selected-ingredient-btn:hover,
+.ingredient-choice-btn:hover {
+    background: var(--tenne-tawny-dark);
+    cursor: pointer;
+}
+  
+.results-info {
+    font-size: 1.2rem;
+    font-family: inherit;
 }
