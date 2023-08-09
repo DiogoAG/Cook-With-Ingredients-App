@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --tenne-tawny: #d65108;
+    --tenne-tawny-dark: #b54507;
+}
+
+body {
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px; /* Adding padding to the body */
+}
+
+.container {
+    min-height: 100vh;
+    padding: 0 20px; /* Adding padding to the container */
+}
+
+/* Adding padding between sections */
+/* .meal-details-content {
+    padding-top: 20px;
+} */
+
+.recipe-instruct,
+.recipe-link,
+.recipe-ingredients {
+    padding: 10px 0;
+}
+
+/* Adjusting the list style and margin for the ingredients list */
+.meal-ingredients-list {
+    padding-left: 0;
+    margin-left: 20px;
+}
+
+.meal-ingredients-list li {
+    list-style: disc; /* Use 'decimal' for ordered list */
+    margin-bottom: 8px; /* Adding some space between list items */
+}
+
+/* Adding padding to the instructions list items */
+.instructions-list {
+    list-style: decimal; /* Use 'disc' for unordered list */
+    padding-left: 30px;
+}
+
+.instructions-list li {
+    padding-bottom: 8px; /* Adding padding at the bottom of each list item */
+}
