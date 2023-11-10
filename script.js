@@ -8,7 +8,7 @@ let resultCount = 0; // Variable to count the number of searches
 // event listeners
 searchBtn.addEventListener('click', getMealList);
 searchInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' && e.shiftKey) {
+  if (e.key === 'Enter') {
     getMealList();
   }
 });
